@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📋 Intelligent Document Compliance Analyzer
 
 An NLP-powered tool that automatically reviews contracts, policies, and agreements (PDF, DOCX, or TXT) against a configurable rule set — flagging missing clauses, compliance gaps, and prohibited language — and generates a scored, shareable report.
@@ -63,10 +64,77 @@ intelligent-document-compliance-analyzer/
 ├── tests/
 │   └── test_compliance_analyzer.py
 └── reports/                      # Generated output (gitignored)
+=======
+# Intelligent Document Compliance Analyzer
+
+An AI-powered application that analyzes enterprise compliance, validation, and regulatory documents using Large Language Models (LLMs) and Natural Language Processing (NLP). The system automatically summarizes documents, extracts key information, identifies missing or inconsistent content, and provides AI-driven compliance insights to improve document quality and review efficiency.
+
+---
+
+## Key Features
+
+Analyze compliance and validation documents
+
+Extract key information and important sections
+
+Generate AI-powered document summaries
+
+Identify missing, incomplete, and inconsistent content
+
+Highlight potential compliance risks
+
+Improve document review efficiency
+
+Reduce manual document validation effort
+
+Provide structured compliance insights
+
+---
+
+## Technology Stack
+
+| Category             | Technologies                                    |
+| -------------------- | ----------------------------------------------- |
+| Programming Language | Python                                          |
+| AI & LLM             | OpenAI API, Large Language Models (LLMs)        |
+| NLP                  | Natural Language Processing, Prompt Engineering |
+| Development          | Visual Studio Code, Git, GitHub                 |
+
+---
+
+## How It Works
+
+1. Upload a compliance or validation document.
+2. Extract and preprocess document content.
+3. Analyze the document using an LLM.
+4. Identify missing sections, inconsistencies, and compliance issues.
+5. Generate document summaries and structured compliance insights.
+6. Display AI-generated results for review.
+
+---
+
+## Project Structure
+
+```text
+Intelligent-Document-Compliance-Analyzer/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── sample_document.pdf
+├── prompts/
+│   └── compliance_prompt.txt
+├── utils/
+│   ├── parser.py
+│   └── analyzer.py
+└── outputs/
+    └── compliance_report.txt
+>>>>>>> 3d9c44e7f2c85d02c878712f23c4256135116c6c
 ```
 
 ---
 
+<<<<<<< HEAD
 ## 🚀 Getting Started
 
 ### 1. Install dependencies
@@ -111,10 +179,29 @@ Upload any `.pdf`, `.docx`, or `.txt` file to get an instant score, category bre
 ### 4. Run tests
 ```bash
 pytest tests/ -v
+=======
+## Installation
+
+```bash
+git clone https://github.com/Benaruth22/Intelligent-Document-Compliance-Analyzer.git
+
+cd Intelligent-Document-Compliance-Analyzer
+
+pip install -r requirements.txt
 ```
 
 ---
 
+## Run the Application
+
+```bash
+python app.py
+>>>>>>> 3d9c44e7f2c85d02c878712f23c4256135116c6c
+```
+
+---
+
+<<<<<<< HEAD
 ## 🔧 Customizing the Rules
 
 Rules live in `rules/compliance_rules.yaml`. Each rule declares a matching `strategy`:
@@ -147,9 +234,59 @@ Add new rules, adjust severity weighting, or swap in your organization's own req
 - Add a rule-authoring UI so non-technical compliance staff can add clauses without editing YAML.
 - Batch-mode CLI for scanning an entire folder of contracts and producing a portfolio-level risk summary.
 - Integrate an LLM call to draft suggested remedial language for each failed clause.
+=======
+## Use Cases
+
+Enterprise Document Review
+
+Compliance Document Analysis
+
+Validation Document Review
+
+Regulatory Documentation
+
+Document Summarization
+
+Risk Identification
+
+AI-Assisted Document Intelligence
+
+---
+
+## Future Enhancements
+
+Support PDF, DOCX, and TXT documents
+
+Export compliance reports to PDF and Excel
+
+Interactive analytics dashboard
+
+Compliance scoring and risk assessment
+
+Integration with enterprise document management systems
+
+Multi-document comparison and analysis
+
+Automated compliance reporting
+>>>>>>> 3d9c44e7f2c85d02c878712f23c4256135116c6c
 
 ---
 
 ## License
 
+<<<<<<< HEAD
 MIT — see [LICENSE](LICENSE).
+=======
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+**Benaruth M**
+AI Engineer
+
+LinkedIn: linkedin.com/in/benaruth-m
+
+GitHub: github.com/Benaruth22
+>>>>>>> 3d9c44e7f2c85d02c878712f23c4256135116c6c
