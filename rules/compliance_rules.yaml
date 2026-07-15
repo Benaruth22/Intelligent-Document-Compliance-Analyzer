@@ -1,0 +1,107 @@
+# =============================================================================
+# Compliance Rule Definitions
+# =============================================================================
+# Each rule describes a clause / requirement that a document is expected to
+# satisfy. The engine supports three matching strategies:
+#   - keyword   : any of `keywords` must appear (case-insensitive)
+#   - regex     : `pattern` must match somewhere in the document
+#   - semantic  : cosine similarity (TF-IDF) between the reference clause
+#                 text and the closest paragraph in the document must exceed
+#                 `threshold`
+#
+# severity: critical | major | minor  -> used for weighting the final score
+# category: used purely for grouping/reporting
+# =============================================================================
+
+- id: DP-001
+  category: "Data Privacy"
+  title: "Data Protection / Privacy Clause"
+  description: "Document must define how personal data is collected, used, and protected."
+  strategy: semantic
+  reference_text: >
+    We collect, process, and store personal data in accordance with applicable
+    data protection laws. Personal information will not be shared with third
+    parties without consent, except as required by law.
+  threshold: 0.18
+  severity: critical
+
+- id: DP-002
+  category: "Data Privacy"
+  title: "Right to Access / Deletion"
+  description: "Document must mention the data subject's right to access or request deletion of their data."
+  strategy: keyword
+  keywords: ["right to access", "right to deletion", "right to be forgotten", "data subject rights"]
+  severity: major
+
+- id: SEC-001
+  category: "Security"
+  title: "Confidentiality Clause"
+  description: "Document must contain a confidentiality / non-disclosure clause."
+  strategy: keyword
+  keywords: ["confidential", "non-disclosure", "nda"]
+  severity: critical
+
+- id: SEC-002
+  category: "Security"
+  title: "Data Breach Notification"
+  description: "Document must specify a breach notification procedure and timeline."
+  strategy: regex
+  pattern: "notify.{0,40}(breach|incident).{0,60}(\\d+\\s*(hours|days))"
+  severity: major
+
+- id: CON-001
+  category: "Contract Terms"
+  title: "Effective Date"
+  description: "Document must clearly state an effective date."
+  strategy: regex
+  pattern: "effective\\s+date"
+  severity: minor
+
+- id: CON-002
+  category: "Contract Terms"
+  title: "Termination Clause"
+  description: "Document must describe conditions under which the agreement can be terminated."
+  strategy: keyword
+  keywords: ["termination", "terminate this agreement", "right to terminate"]
+  severity: major
+
+- id: CON-003
+  category: "Contract Terms"
+  title: "Governing Law"
+  description: "Document must specify the governing law / jurisdiction."
+  strategy: keyword
+  keywords: ["governing law", "jurisdiction", "governed by the laws"]
+  severity: minor
+
+- id: FIN-001
+  category: "Financial Compliance"
+  title: "Payment Terms"
+  description: "Document must define payment amount, schedule, or terms."
+  strategy: regex
+  pattern: "(payment|fee).{0,40}(due|schedule|net\\s?\\d+|invoice)"
+  severity: major
+
+- id: FIN-002
+  category: "Financial Compliance"
+  title: "Late Payment / Penalty Clause"
+  description: "Document should specify consequences of late payment."
+  strategy: keyword
+  keywords: ["late payment", "penalty", "interest on overdue"]
+  severity: minor
+
+- id: LIA-001
+  category: "Liability"
+  title: "Limitation of Liability"
+  description: "Document must limit or define liability exposure."
+  strategy: keyword
+  keywords: ["limitation of liability", "liable for", "indemnif"]
+  severity: critical
+
+- id: ACC-001
+  category: "Accessibility"
+  title: "Prohibited / Discriminatory Language"
+  description: "Document must NOT contain discriminatory or exclusionary language."
+  strategy: keyword
+  keywords: ["no women", "men only", "able-bodied only", "no disabilities allowed"]
+  severity: critical
+  prohibited: true

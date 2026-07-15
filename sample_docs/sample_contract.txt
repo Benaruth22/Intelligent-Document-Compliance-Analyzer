@@ -1,0 +1,37 @@
+SERVICE AGREEMENT
+
+This Service Agreement ("Agreement") is entered into with an effective date of January 1, 2026,
+between Acme Consulting LLC ("Provider") and Globex Corporation ("Client").
+
+1. SCOPE OF SERVICES
+Provider agrees to deliver software consulting services as described in Exhibit A.
+
+2. CONFIDENTIALITY
+Each party agrees to keep confidential all proprietary information disclosed by the other
+party during the term of this Agreement, and will not disclose such information to any
+third party without prior written consent.
+
+3. PAYMENT TERMS
+Client shall pay Provider a monthly fee of $10,000, due within thirty (30) days of invoice
+(Net 30). Any amount not paid on time shall be subject to a late payment penalty of 1.5%
+per month on the outstanding balance.
+
+4. DATA HANDLING
+Provider may process limited personal data of Client's employees solely to perform the
+services described herein. Provider will not share personal information with third parties
+without consent, except as required by law.
+
+5. TERMINATION
+Either party may terminate this Agreement upon thirty (30) days written notice. Client may
+also terminate immediately in the event of a material breach that remains uncured for
+fifteen (15) days after written notice.
+
+6. GOVERNING LAW
+This Agreement shall be governed by the laws of the State of Delaware, without regard to
+its conflict of law provisions.
+
+7. LIMITATION OF LIABILITY
+In no event shall either party be liable for any indirect, incidental, or consequential
+damages arising out of this Agreement.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
